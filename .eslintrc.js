@@ -1,6 +1,7 @@
 module.exports = {
   parser: "babel-eslint",
   extends: ["eslint:recommended", "plugin:import/warnings", "plugin:react/recommended", "prettier/react"],
+  plugins: ["react", "react-hooks", "jest"],
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
@@ -14,18 +15,17 @@ module.exports = {
     "node": true,
     "jest/globals": true,
   },
-  plugins: ["react", "react-hooks", "jest"],
   rules: {
     "react/react-in-jsx-scope": "off",
-    "no-var": 1,
-    "prefer-const": 2,
+    "no-var": "warn",
+    "prefer-const": "error",
     "no-console": "off",
     "no-use-before-define": "warn",
-    "react/no-typos": 2,
-    "react/jsx-fragments": [1, "syntax"],
-    "react/prop-types": 0,
+    "react/no-typos": "error",
+    "react/jsx-fragments": ["warn", "syntax"],
+    "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "react/boolean-prop-naming": ["error", { "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+", "validateNested": true }],
     // "react-hooks/exhaustive-deps": "warn"
   },
