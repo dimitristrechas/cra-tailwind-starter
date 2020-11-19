@@ -4,4 +4,5 @@ module.exports = {
   printWidth: 120,
   quoteProps: "preserve",
   endOfLine: "auto",
+  singleQuote: false,
 };
